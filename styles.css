@@ -1,17 +1,40 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'popins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-.container{
-    width: 100%;
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #9b94a0, #2a2e34);
+}
+
+.container {
+    width: 750px;
+    height: 550px;
+    background: linear-gradient(135deg, #001f3f, #3a5376);
     color: #fff;
-    padding-top: 5%;
-    padding-left: 10%;
+    padding: 5% 10%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
 }
 
 .container h1{
@@ -45,8 +68,17 @@
     color: #fff;
     padding: 15px 25px;
     margin: 30px 0 20px;
+    transition: all 0.3s;
 }
 
+/* Button Hover Effect */
+.container button:hover {
+    background-color: #2a2e34;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Input Box */
 .input-box{
     position: relative;
     width: 100%;
@@ -67,3 +99,27 @@
     right: 15px;
     cursor: pointer;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container{
+        width: 85%;
+        padding: 20px;
+    }
+
+    .container h1{
+        font-size: 22px;
+        
+    }
+
+    .container button{
+        font-size: 20px;
+        /* padding: 12px 20px; */
+    }
+
+    .input-box{
+        max-width: 100%;
+        min-height: 70px;
+    }
+}
+
